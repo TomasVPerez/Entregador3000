@@ -1,3 +1,6 @@
+#TomasPerez
+#https://github.com/TomasVPerez
+
 import os, time
 from docx import Document
 from docx.shared import Inches, Pt
@@ -20,18 +23,18 @@ class Sistema:
  / /___/ / / / /_/ /  /  __/ /_/ / /_/ / /_/ / /_/ / /      ___/ / /_/ / /_/ / /_/ / 
 /_____/_/ /_/\__/_/   \___/\__, /\__,_/\__,_/\____/_/      /____/\____/\____/\____/  
                           /____/         
-by: Tomas Perez                                            
+by: Tomas Perez
+https://github.com/TomasVPerez
 ''')
         nombreEntrega = input("Nombre del entregable: ")
         header = input("Materia-NombreyApellido(nroAlumno)-Fecha: ")
         self.crearDocumento(nombreEntrega, header)
         
     def guardarImagenes(self):
-        archivos = next(os.walk(self.descargas))[2]
+        archivos = next(os.walk(self.descargas))[2] #Recorre todos los archivos del directorio especificado
         for archivo in archivos:
-            if "WhatsApp" in archivo and archivo.split(".")[-1] in self.extensiones:
+            if "WhatsApp" in archivo and archivo.split(".")[-1] in self.extensiones: #Si encuentra una foto con 'WhatsApp' en el nombre y las extensiones aceptadas, lo guarda en la lista imagenes.
                 self.imagenes.append(archivo)
-                # print(self.imagenes)
 
     def crearDocumento(self, nombre, header):
         word = Document()
@@ -43,8 +46,8 @@ by: Tomas Perez
         fuente.size = Pt(11)
         for imagen in self.imagenes:
             creacion = time.ctime(os.path.getctime(f"{self.descargas}/{imagen}"))
-            if time.ctime()[:13] == creacion[:13]: #comparo dia mes y hora
-                word.add_picture(f"{self.descargas}/{imagen}", width=Inches(5.0))
+            if time.ctime()[:13] == creacion[:13]: #Compara dia mes y hora para corrobrar que son imagenes de wpp descargadas recientemente (sino pondria todas las imagenes de wpp que encuentre en el descarga).
+                word.add_picture(f"{self.descargas}/{imagen}", width=Inches(5.0)) #Detecta el orden de descarga automaticamente y agrega las fotos en orden.
                 ultimaFoto = word.paragraphs[-1] 
                 ultimaFoto.alignment = WD_ALIGN_PARAGRAPH.CENTER
             else:
