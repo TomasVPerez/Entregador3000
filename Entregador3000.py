@@ -46,7 +46,7 @@ https://github.com/TomasVPerez
         fuente.size = Pt(11)
         for imagen in self.imagenes:
             creacion = time.ctime(os.path.getctime(f"{self.descargas}/{imagen}"))
-            if time.ctime()[:13] == creacion[:13]: #Compara dia mes y hora para corrobrar que son imagenes de wpp descargadas recientemente (sino pondria todas las imagenes de wpp que encuentre en el descarga).
+            if time.ctime()[:13] == creacion[:13]: #Compara dia mes y hora para corrobrar que son imagenes de wpp descargadas recientemente (sino pondria todas las imagenes de wpp que encuentre en descargas).
                 word.add_picture(f"{self.descargas}/{imagen}", width=Inches(5.0)) #Detecta el orden de descarga automaticamente y agrega las fotos en orden.
                 ultimaFoto = word.paragraphs[-1] 
                 ultimaFoto.alignment = WD_ALIGN_PARAGRAPH.CENTER
