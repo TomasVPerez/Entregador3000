@@ -22,4 +22,7 @@ Creación de documento Word automatizado ya que en las pruebas online no nos dan
  pyinstaller --onefile -i rayo.ico Entregador3000.py #-i para usar el icono para el ejecutable (el icono debe estar en el mismo directorio que el programa).
  ```
  
+### Restricciones (por ahora):
 
+-Solo funciona para Windows en inglés.
+-Las imagenes deben mandarse a WppWeb de a una. Si se seleccionan todas y se envían desde un solo mensaje, Windows detecta como si se descargaran todas a la misma hora exacta por lo que no se subirán en orden al documento.
