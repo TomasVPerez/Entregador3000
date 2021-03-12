@@ -1,11 +1,11 @@
 # Entregador 3000
 ## Automatizador de entregas virtuales
-Como en las pruebas online no nos dan tiempo extra para sacar fotos a lo que hicimos y armar el documento, automaticé el proceso.
+Creación de documento Word automatizado ya que en las pruebas online no nos dan tiempo extra para sacar fotos a lo que hicimos y prepararlo.
 ### ¿Cómo funciona?
 
 -Se sacan las fotos a la entrega y se pasan por WppWeb para descargarlas desde la pc
 
--Se inicia el programa e ingresamos el nombre que queremos ponerle al documento (Word) y un encabezado para el mismo.
+-Se inicia el programa e ingresamos el nombre que queremos ponerle al documento y un encabezado para el mismo.
 
 -El programa busca todas las imagenes descargadas desde WppWeb en la ultima hora y las agrega al documento por orden de descarga.
 
