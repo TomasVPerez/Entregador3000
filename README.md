@@ -25,4 +25,5 @@ Creación de documento Word automatizado ya que en las pruebas online no nos dan
 ### Restricciones (por ahora):
 
 -Solo funciona para Windows en inglés.
+
 -Las imagenes deben mandarse a WppWeb de a una. Si se seleccionan todas y se envían desde un solo mensaje, Windows detecta como si se descargaran todas a la misma hora exacta por lo que no se subirán en orden al documento.
