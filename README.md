@@ -10,7 +10,7 @@ Como en las pruebas online no nos dan tiempo extra para sacar fotos a lo que hic
  
  Para crear un ejecutable abrir powershell en el directorio donde se encuentra el programa y usar:
  ```
- pyinstaller --onefile -i rayo.ico Entregador3000.py
+ pyinstaller --onefile -i rayo.ico Entregador3000.py #-i para usar el icono para el ejecutable (el icono debe estar en el mismo directorio que el programa).
  ```
  
--i para usar el icono para el ejecutable (el icono debe estar en el mismo directorio que el programa).
+
