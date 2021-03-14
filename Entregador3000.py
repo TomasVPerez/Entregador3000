@@ -12,8 +12,8 @@ class Sistema:
         self.extensiones = ["jpg", "PNG", "jpeg"]
         self.imagenes = []
 
-        self.usuario = usuario = os.path.expanduser("~")
-        self.descargas = descargas = f"{usuario}/Downloads"
+        self.usuario = os.path.expanduser("~")
+        self.descargas = f"{self.usuario}/Downloads"
 
     def mostrarMenu(self):
         print('''
