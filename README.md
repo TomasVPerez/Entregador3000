@@ -11,17 +11,6 @@ Creación de documento Word automatizado ya que en las pruebas online no nos dan
 
 -Finalmente crea una carpeta en el escritorio con el documento dentro.
  
- Para crear un ejecutable abrir cmd e instalar pyinstaller:
- 
- ```
- pip install pyinstaller
- ```
- 
- Abrir powershell en el directorio donde se encuentra el programa y escribir:
- ```
- pyinstaller --onefile -i rayo.ico Entregador3000.py #-i para usar el icono para el ejecutable (el icono debe estar en el mismo directorio que el programa).
- ```
- 
 ### Restricciones (por ahora):
 
 -Solo funciona para Windows en inglés.
